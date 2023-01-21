@@ -162,7 +162,7 @@ class Battle(Enemy.Enemy):
                             f.write(str(cardname)+"を使用した場合\n")
                             if searching.seek_i(cardname,1) == 'power':
                                 """使用カードがパワーだった場合"""
-                                energy, piles, debuffs[1], strength, dex, power_stats, turn_end = card_use.power_use(cardname, piles, debuffs,strength, dex, power_stats)
+                                energy, piles, debuffs[1], strength, dex, power_stats, turn_end = card_use.power_use(cardname, energy, piles, debuffs,strength, dex, power_stats)
                             else:
                                 energy, piles, block, damage, debuffs, strength, dex, turn_end, count= card_use.card_use_h(cardname, energy, piles, block, damage, debuffs, strength, dex, power_stats)
                             """カード使用後の敵体力の減少の処理"""
